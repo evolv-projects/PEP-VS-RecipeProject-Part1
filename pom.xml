@@ -7,8 +7,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Reva Recipe</name>
 
-	<!-- Java version needs to be above 9 and below 22. If using Java version 22 please include Byte
-	Buddy dependency is commented out near the bottom of the file. -->
 	<properties>
 		<maven.compiler.target>21</maven.compiler.target>
 		<maven.compiler.source>21</maven.compiler.source>
@@ -83,10 +81,11 @@
 			<scope>test</scope>
 		</dependency>
 		<!--  https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy  -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>net.bytebuddy</groupId>
 			<artifactId>byte-buddy</artifactId>
 			<version>1.15.5</version>
-		</dependency> -->
+		</dependency>
 	</dependencies>
 </project>
+
