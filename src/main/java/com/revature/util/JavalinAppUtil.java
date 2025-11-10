@@ -55,13 +55,13 @@ public class JavalinAppUtil {
      * Creates a Javalin instance, configures the routes for all controllers, 
      * and applies any necessary middleware, including admin middleware.
      *
-     * @return the configured Javalin instance
+	 * (FOR REFERENCE) This method is part of the backend logic.
+     * No modifications or implementations are required.
      */
-	
     public Javalin getApp() {
         Javalin app = Javalin.create(config -> {
-            config.plugins.enableCors(cors -> {
-                cors.add(it -> {
+            config.bundledPlugins.enableCors(cors -> {
+                cors.addRule(it -> {
                     it.anyHost();
                 });
 
@@ -69,6 +69,7 @@ public class JavalinAppUtil {
 
             
         });
+
 
         // Configure routes for each controller
         recipeController.configureRoutes(app);
